@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net48;net6.0-windows;net8.0-windows</TargetFrameworks>
+		<LangVersion>latest</LangVersion>
+		<UseWindowsForms>true</UseWindowsForms>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageId>WinFormsNotificationBanner</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Sebastian Glinka</Authors>
+		<Company>SG</Company>
+		<Description>Elegancki system powiadomień bannerowych dla aplikacji Windows Forms. Obsługuje błędy, ostrzeżenia, sukcesy i informacje z płynną animacją.</Description>
+		<PackageTags>winforms;notifications;banner;toast;alerts;ui</PackageTags>
+		<PackageProjectUrl>https://github.com/twojeusername/NotificationBanner</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/twojeusername/NotificationBanner</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\" />
+		<None Include="icon.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+		<Reference Include="System.Windows.Forms" />
+		<Reference Include="System.Drawing" />
+	</ItemGroup>
+
+</Project>
